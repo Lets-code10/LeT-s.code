@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  position: absolute;
+  background: transparent;
+  width: calc(var(--i) * 5vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid rgb(0, 255, 13);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(50px);
+  animation: animate 10s ease-in-out calc(var(--i) * 0.08s) infinite;
+  box-shadow: 0 0 15px rgb(124, 124, 124),
+              inset 0 0 15px rgb(124, 124, 124);
+}
+
+@keyframes animate {
+  0%, 100% {
+    transform: rotateX(70deg) translateZ(50px) translateY(200vmin);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: rotateX(70deg) translateZ(50px) translateY(-150vmin);
+    filter: hue-rotate(360deg);
+  }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+body {
+    font-family: "Poppins",sans-serif;
+    background:#0f172a;
+    color: white ;
+}
+
+nav {
+    width: 100%;
+    padding: 1rem 5%;
+    background: rgba(255,255,255,0.05);
+    border-bottom:1px solid rgba(155,255,255,0.1);
+    backdrop-filter:blur(15px);
+    margin-bottom:2rem;
+    
+    display: flex;
+    align-items: centre;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    
+}
+
+.logo {
+    font-size:1.1rem;
+    color:#38bdf8;
+    font-weight:700;
+    letter-spacing: 1px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li a {
+    position: relative;
+    font-size: 1rem;
+    font-weight:500;
+    text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s;
+    
+}
+
+.nav-links li a:hover {
+    color:#38bdf8;
+    text-shadow: 0 0 10px #38bdf8;
+}
+
+.btns {
+    display: flex;
+}
+
+.btn {
+    padding: 3 3;
+    border-radius: 10px;
+    font-weight:600;
+    font-size: 1rem;
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 15px #38bdf8;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0aa9f3;
+    box-shadow:0 0 25px #0aa9f3;
+
+}
+
+#canvas {
+  position: fixed;   /* makes the canvas stay in one place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #000;  /* dark background for visibility */
+  z-index: 9999;     /* ensures it stays above everything else */
+}
