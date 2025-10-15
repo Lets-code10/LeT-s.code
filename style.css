@@ -86,6 +86,7 @@ nav {
     text-decoration: none;
     color: #e2e8f0;
     transition: 0.3s;
+    float: right ;
     
 }
 
@@ -94,28 +95,7 @@ nav {
     text-shadow: 0 0 10px #38bdf8;
 }
 
-.btns {
-    display: flex;
-}
 
-.btn {
-    padding: 3 3;
-    border-radius: 10px;
-    font-weight:600;
-    font-size: 1rem;
-    background: #38bdf8;
-    color: #0f172a;
-    box-shadow: 0 0 15px #38bdf8;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #0aa9f3;
-    box-shadow:0 0 25px #0aa9f3;
-
-}
 
 #canvas {
   position: fixed;   /* makes the canvas stay in one place */
@@ -126,4 +106,28 @@ nav {
   display: block;
   background: #000;  /* dark background for visibility */
   z-index: 9999;     /* ensures it stays above everything else */
+}
+
+a.button {
+    padding: 3px 20px;
+    border-radius: 10px;
+    font-weight:600;
+    font-size: 1rem;
+    background: #38bdf8;
+    color: #0f172a;
+    box-shadow: 0 0 15px #38bdf8;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    float:right;
+}
+
+a.button:hover {
+    background: #0aa9f3;
+    box-shadow:0 0 25px #0aa9f3;
+    text-decoration: none;
 }
